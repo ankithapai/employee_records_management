@@ -1,0 +1,152 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Form Styling */
+form {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  grid-column: span 2;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+form button.cancel {
+  background-color: #6c757d;
+}
+
+form button.cancel:hover {
+  background-color: #5a6268;
+}
+
+/* Employee List */
+.employee-list {
+  margin-top: 2rem;
+}
+
+.employee-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.employee-card h3 {
+  margin: 0;
+  color: #333;
+}
+
+.employee-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.employee-card .actions {
+  display: flex;
+  gap: 10px;
+}
+
+.employee-card button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.employee-card button.view {
+  background-color: #17a2b8;
+}
+
+.employee-card button.view:hover {
+  background-color: #117a8b;
+}
+
+.employee-card button.delete {
+  background-color: #dc3545;
+}
+
+.employee-card button.delete:hover {
+  background-color: #c82333;
+}
+
+/* Search and Filter */
+.search-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-filter input,
+.search-filter select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .employee-card .actions {
+    margin-top: 10px;
+  }
+
+  .search-filter {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
