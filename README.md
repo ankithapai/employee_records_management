@@ -58,6 +58,9 @@ Backend: [Backend link](http://localhost:5000)
 ### Search View
 ![Search View](sceenshots/search-view.png)
 
+### Export as CSV file
+![Export as CSV](sceenshots/export-csv.png)
+
 ### Dark View Form
 ![Dark View Form](sceenshots/dark-view-form.png)
 
