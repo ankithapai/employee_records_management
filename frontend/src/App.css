@@ -1,0 +1,346 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Form Styling */
+form {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr;
+}
+
+form input,
+form select {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  grid-column: span 2;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+form button.cancel {
+  background-color: #6c757d;
+}
+
+form button.cancel:hover {
+  background-color: #5a6268;
+}
+
+/* Employee List */
+.employee-list {
+  margin-top: 2rem;
+}
+
+.employee-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.employee-card h3 {
+  margin: 0;
+  color: #333;
+}
+
+.employee-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.employee-card .actions {
+  display: flex;
+  gap: 10px;
+}
+
+.employee-card button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.employee-card button.view {
+  background-color: #17a2b8;
+}
+
+.employee-card button.view:hover {
+  background-color: #117a8b;
+}
+
+.employee-card button.delete {
+  background-color: #dc3545;
+}
+
+.employee-card button.delete:hover {
+  background-color: #c82333;
+}
+
+/* Search and Filter */
+.search-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-filter input,
+.search-filter select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* CSS for autocomplete */
+.suggestions-dropdown {
+  position: absolute;
+  background: white;
+  border: 1px solid #ddd;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: calc(43% - 22px);
+  /* Matches the input width */
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  /* Rounded edges */
+  top: 100%;
+  /* Positions the dropdown below the input */
+  left: 0;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.suggestion-item:hover {
+  background: #f0f0f0;
+}
+
+/* Ensures the parent container aligns with relative positioning */
+.search-filter {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-filter input {
+  position: relative;
+  font-size: 16px;
+  /* Keeps input aligned with dropdown */
+}
+
+label {
+  position: absolute;
+  top: -24px;
+  right: 328px;
+  font-size: 12px;
+  padding: 5px 2px;
+}
+
+/* Dark Mode */
+.dark-mode-container {
+  display: flex;
+  justify-content: flex-end;
+  /* Aligns button to the right */
+  margin-bottom: 20px;
+  /* Adds spacing from the main content */
+}
+
+.dark-mode-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  /* Subtle lift effect */
+}
+
+.dark-mode-button:active {
+  transform: translateY(0);
+  /* Reset lift effect on click */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Body Styling for Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Container Styling in Dark Mode */
+body.dark-mode .container {
+  background-color: #1e1e1e;
+  border-color: #333333;
+}
+
+/* Input and Select Styling in Dark Mode */
+body.dark-mode input,
+body.dark-mode select {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border-color: #444444;
+}
+
+body.dark-mode input::placeholder {
+  color: #aaaaaa;
+}
+
+/* Button Styling in Dark Mode */
+body.dark-mode button {
+  background-color: #444444;
+  color: #ffffff;
+  border-color: #666666;
+}
+
+body.dark-mode button:hover {
+  background-color: #555555;
+}
+
+/* Dropdown Suggestions in Dark Mode */
+body.dark-mode .suggestions-dropdown {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border-color: #444444;
+}
+
+body.dark-mode .suggestion-item:hover {
+  background-color: #3c3c3c;
+}
+
+body.dark-mode h1 {
+  color: #f9f9f9;
+}
+
+body.dark-mode .pagination span {
+  color: #f9f9f9;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.pagination button:disabled {
+  background-color: #ddd;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Export button */
+.export-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.export-button:hover {
+  background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .employee-card .actions {
+    margin-top: 10px;
+  }
+
+  .search-filter {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
