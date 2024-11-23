@@ -1,6 +1,5 @@
 # Employee Management System
 
-Overview
 A full-stack application to manage employees, built with Flask for the backend, React for the frontend and ElasticSearch for the database.
 
 ## Key Features
