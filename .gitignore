@@ -1,11 +1,35 @@
-# generated files
-target/
-generated/
+ 
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-error.log*
 
-# dependencies
-Dependencies.toml
+# Python virtual environment
+venv/
+*.pyc
+__pycache__/
 
-# config files
-Config.toml
-# the config files used for testing, Uncomment the following line if you want to commit the test config files
-#!**/tests/Config.toml
+# Environment variables
+.env
+
+# Build directories
+build/
+dist/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+
+# Temporary files
+*.tmp
+*.bak
+*.old
